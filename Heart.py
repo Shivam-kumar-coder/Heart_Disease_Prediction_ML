@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd 
 st.title("HEART DISEASE Prediction")
 st.sidebar.title("Enter Your Health Report")
-df=pd.read_csv("D:/data/heart.csv")
+df=pd.read_csv("heart.csv")
 df.drop(['FastingBS','Oldpeak','ExerciseAngina'],axis=1,inplace=True)
 df.Sex.replace({"M":0,"F":1},inplace=True)
 df.ChestPainType.replace({'ATA':0,'NAP':1,'ASY':2,'TA':3},inplace=True)
